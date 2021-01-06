@@ -31,13 +31,16 @@ $(call inherit-product-if-exists, external/hyphenation-patterns/patterns.mk)
 $(call inherit-product-if-exists, frameworks/base/data/keyboards/keyboards.mk)
 $(call inherit-product-if-exists, frameworks/webview/chromium/chromium.mk)
 
+#FIXME: T-HEAD disable modules for missing dependence
+#PRODUCT_PACKAGES += \
+    Bluetooth \
+    BluetoothMidiService \
+    BuiltInPrintService \
+
 PRODUCT_PACKAGES += \
     BasicDreams \
     BlockedNumberProvider \
-    Bluetooth \
-    BluetoothMidiService \
     BookmarkProvider \
-    BuiltInPrintService \
     CalendarProvider \
     cameraserver \
     CaptivePortalLogin \

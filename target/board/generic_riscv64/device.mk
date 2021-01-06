@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The Android Open Source Project
+# Copyright (C) 2013 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,14 +14,6 @@
 # limitations under the License.
 #
 
-# This makefile contains the non-system partition contents for
-# media-capable devices (non-wearables). Only add something here
-# if it definitely doesn't belong on wearables. Otherwise, choose
-# base_vendor.mk.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base_vendor.mk)
-
-#FIXME: T-HEAD disable modules for missing dependence
-# /vendor packages
-#PRODUCT_PACKAGES += \
-    libaudiopreprocessing \
-    libwebrtc_audio_preprocessing \
+# Adjust the Dalvik heap to be appropriate for a tablet.
+$(call inherit-product-if-exists, frameworks/base/build/tablet-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/tablet-dalvik-heap.mk)

@@ -20,15 +20,17 @@
 # does, use base_vendor.mk).
 $(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
 
+#FIXME: T-HEAD disable modules for missing dependence
+#PRODUCT_PACKAGES += \
+    Camera2 \
+    Gallery2 \
 # /product packages
 PRODUCT_PACKAGES += \
     Browser2 \
     Calendar \
-    Camera2 \
     Contacts \
     DeskClock \
     Email \
-    Gallery2 \
     LatinIME \
     Launcher3QuickStep \
     Music \

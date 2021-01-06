@@ -14,6 +14,10 @@
 # limitations under the License.
 #
 
+#FIXME: T-HEAD disable modules for missing dependence
+#PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+
 # Base modules and settings for the system partition.
 PRODUCT_PACKAGES += \
     abb \
@@ -53,7 +57,6 @@ PRODUCT_PACKAGES += \
     com.android.conscrypt \
     com.android.location.provider \
     com.android.media \
-    com.android.media.swcodec \
     com.android.resolv \
     com.android.tzdata \
     ContactsProvider \
@@ -274,13 +277,14 @@ PRODUCT_PACKAGES += \
     system_manifest.xml \
     system_compatibility_matrix.xml \
 
-# Host tools to install
+#FIXME: T-HEAD disable modules for missing dependence
+#    ld.mc \
+#    bcc
 PRODUCT_HOST_PACKAGES += \
     BugReport \
     adb \
     art-tools \
     atest \
-    bcc \
     bit \
     e2fsck \
     fastboot \
@@ -288,7 +292,6 @@ PRODUCT_HOST_PACKAGES += \
     icu-data_host_runtime_apex \
     idmap2 \
     incident_report \
-    ld.mc \
     lpdump \
     mdnsd \
     minigzip \

@@ -73,9 +73,11 @@ PRODUCT_COPY_FILES += \
 # Support addtional P vendor interface
 PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
+#FIXME: T-HEAD disable modules for missing dependence
+#PRODUCT_PACKAGES += \
+    messaging \
 # More AOSP packages
 PRODUCT_PACKAGES += \
-    messaging \
     PhotoTable \
     WAPPushManager \
     WallpaperPicker \
