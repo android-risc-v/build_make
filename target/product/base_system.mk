@@ -97,7 +97,6 @@ PRODUCT_PACKAGES += \
     heapprofd \
     heapprofd_client \
     gatekeeperd \
-    gpuservice \
     hid \
     hwservicemanager \
     idmap2 \
